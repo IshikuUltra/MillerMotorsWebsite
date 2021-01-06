@@ -1,0 +1,77 @@
+/* div default display: block;*/
+/* i want an inline wrapping grid */
+html {
+    width: 100vw;
+    min-height: 100%;
+    overflow: hidden;
+}
+
+body {
+    min-height: 100%;
+    width: 100%;
+    margin: 0;
+    overflow: hidden;
+}
+
+main {
+    width: 100%;
+    height: 100%;
+}
+
+head {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: baseline;
+    align-content: center;
+}
+
+.logo {
+    text-align: center; /*horizontal image aligning*/
+}
+
+.logo-img {
+}
+
+/* grid struct -> container/div/img */
+.grid-container {
+    width: 100%;
+    height: 100%;
+    margin: 5% auto;
+    display: inline-grid;
+    grid-template-columns: repeat(4, minmax(0px, 1fr)); /* auto?*/
+    grid-template-rows: repeat(3, minmax(300px, 1fr));
+    gap: 3px;
+    /* column-gap: ; */
+    /* row-gap: ; */
+    justify-items: center; /* aligns grid items along inline(row axis) */
+    /* align-items: ; aligns grid items along the block(column axis) */
+    /* justify-content: center; sets grid side to container size */    
+}
+/* add a media query for 2 column on tablet and 1 column on mobile */
+
+.grid {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    text-align: center; /*horizontal image aligning*/
+    margin: auto;
+    align-items: center;
+    opacity: 0.7;
+}
+
+.grid:hover {
+    /* box-shadow: 2px 2px 1px black; the shadow color should be the brans colors */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    opacity: 1;
+    transition: opacity 0.4s ease-in-out;
+}
+
+.subitem {/* img element is inline element */
+    margin: 0 auto;
+}
+
+footer {
+    margin-top: auto;
+}
